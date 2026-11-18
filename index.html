@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071526">
+  <meta name="description" content="Создай свою маленькую новогоднюю сказку!">
+  <title>New Year Surprise 2027 ✨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="snow-layer" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="На главную"><span>✦</span> NEW YEAR <b>2027</b></a>
+    <div class="top-tools">
+      <span class="top-note">Твоя личная зимняя сказка</span>
+      <button class="music-toggle" id="musicToggle" type="button" aria-pressed="false" aria-label="Включить новогоднюю музыку">♫ Музыка: выкл.</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro panel" id="intro">
+      <div class="eyebrow"><span class="sparkle">✧</span> ОДНАЖДЫ ПОД НОВЫЙ ГОД</div>
+      <h1>Твоя история<br><em>начинается здесь</em></h1>
+      <p class="lead">Выбери детали — и загляни в собственную новогоднюю сказку, где тебя уже ждут ёлка, подарки и верный пушистый друг.</p>
+      <div class="intro-art" aria-hidden="true">
+        <div class="moon"></div><div class="hill hill-back"></div><div class="hill hill-front"></div>
+        <div class="tree tree-one"><i></i><i></i><i></i><b>✦</b></div>
+        <div class="tree tree-two"><i></i><i></i><i></i><b>✧</b></div>
+        <div class="gift gift-one"></div><div class="gift gift-two"></div>
+        <div class="intro-caption">THE MAGIC IS YOURS</div>
+      </div>
+      <button class="primary" id="startBtn">Создать мою сказку <span>→</span></button>
+      <div class="tiny-note">Бесплатно · Без регистрации · Фото не отправляется на сервер</div>
+    </section>
+
+    <section class="form-section panel hidden" id="formSection">
+      <div class="section-kicker">ШАГ 1 ИЗ 2</div>
+      <h2>Расскажи о себе</h2>
+      <p class="sub">Немного деталей — и мы подготовим твою сцену.</p>
+      <form id="storyForm">
+        <div class="field">
+          <label for="personName">Как тебя зовут?</label>
+          <input id="personName" name="personName" maxlength="24" placeholder="Например, Саша" required>
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label for="petName">Имя питомца</label>
+            <input id="petName" name="petName" maxlength="24" placeholder="Например, Снежок" required>
+          </div>
+          <div class="field">
+            <label for="petType">Кто твой питомец?</label>
+            <select id="petType" name="petType">
+              <option value="🐱">Кошка</option><option value="🐶">Собака</option>
+              <option value="🐹">Хомяк</option><option value="🐰">Кролик</option>
+              <option value="🐟">Рыбки</option><option value="🦜">Попугай</option>
+              <option value="🐢">Черепаха</option><option value="🐴">Лошадь</option>
+              <option value="🐾">Другое</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label>Цвет твоей новогодней шапки</label>
+          <div class="color-options" role="radiogroup" aria-label="Любимый цвет">
+            <label class="color-choice"><input type="radio" name="hatColor" value="#e85d75" checked><span style="--swatch:#e85d75"></span><small>Розовый</small></label>
+            <label class="color-choice"><input type="radio" name="hatColor" value="#4b91e2"><span style="--swatch:#4b91e2"></span><small>Голубой</small></label>
+            <label class="color-choice"><input type="radio" name="hatColor" value="#49a77c"><span style="--swatch:#49a77c"></span><small>Зелёный</small></label>
+            <label class="color-choice"><input type="radio" name="hatColor" value="#e5ae45"><span style="--swatch:#e5ae45"></span><small>Жёлтый</small></label>
+            <label class="color-choice"><input type="radio" name="hatColor" value="#a27ad8"><span style="--swatch:#a27ad8"></span><small>Фиолетовый</small></label>
+            <label class="color-choice"><input type="radio" name="hatColor" value="#f0eee8"><span style="--swatch:#f0eee8"></span><small>Белый</small></label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Выбери атмосферу своей сказки</label>
+          <div class="style-grid">
+            <label class="style-card selected"><input type="radio" name="style" value="realistic" checked>
+              <span class="style-preview realistic"></span><b>Реалистичная</b><small>Как в кино</small>
+            </label>
+            <label class="style-card"><input type="radio" name="style" value="3d">
+              <span class="style-preview cartoon"></span><b>Мультфильм 3D</b><small>Добрая анимация</small>
+            </label>
+            <label class="style-card"><input type="radio" name="style" value="anime">
+              <span class="style-preview anime"></span><b>Аниме</b><small>Зимняя фантазия</small>
+            </label>
+            <label class="style-card"><input type="radio" name="style" value="clay">
+              <span class="style-preview clay"></span><b>Пластилиновый</b><small>Игрушечный мир</small>
+            </label>
+            <label class="style-card"><input type="radio" name="style" value="watercolor">
+              <span class="style-preview watercolor"></span><b>Акварель</b><small>Нежная сказка</small>
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="facePhoto">Твоё фото <span class="optional">необязательно</span></label>
+          <div class="upload-box">
+            <input id="facePhoto" type="file" accept="image/png,image/jpeg,image/webp">
+            <span class="upload-icon">＋</span>
+            <span><b>Добавить фото лица</b><small id="fileHint">Если не добавлять — будет сказочный аватар</small></span>
+          </div>
+          <p class="privacy">🔒 Фото обрабатывается только в твоём браузере и не загружается на сайт.</p>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="secondary" id="backBtn">Назад</button>
+          <button type="submit" class="primary">Создать сказку <span>✦</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="result-section hidden" id="resultSection">
+      <div class="result-top"><span class="section-kicker">ТВОЯ НОВОГОДНЯЯ ИСТОРИЯ</span><button class="text-button" id="editBtn">Изменить детали ↗</button></div>
+      <div class="scene" id="scene">
+        <div class="scene-stars"></div><div class="scene-moon"></div>
+        <div class="aurora"></div>
+        <div class="scene-copy"><span>СЕГОДНЯ СЛУЧИЛОСЬ ЧУДО</span><h2 id="greetingTitle">С Новым годом!</h2><p id="greetingText"></p></div>
+        <div class="big-tree"><div class="star-top">✦</div><div class="tree-layer l1"></div><div class="tree-layer l2"></div><div class="tree-layer l3"></div><div class="trunk"></div><div class="tree-lights">✧　·　✦　·　✧</div></div>
+        <div class="person-wrap"><div class="hat" id="hat"></div><div class="person" id="person"><span class="face-emoji">☺</span></div><div class="scarf"></div></div>
+        <div class="pet-wrap"><div class="pet-emoji" id="petEmoji">🐱</div><div class="pet-label" id="petLabel"></div></div>
+        <div class="present p1">🎁</div><div class="present p2">🎁</div><div class="present p3">🎁</div>
+        <div class="ground"></div>
+        <div class="scene-bottom">✧ ПУСТЬ СБУДЕТСЯ САМОЕ ДОБРОЕ ✧</div>
+      </div>
+      <div class="result-message"><h3 id="messageTitle">С праздником!</h3><p id="messageBody"></p></div>
+      <div class="result-actions">
+        <button class="primary" id="replayBtn">↻ Посмотреть ещё раз</button>
+        <button class="secondary" id="shareBtn">Поделиться ↗</button>
+        <button class="text-button" id="newBtn">Создать другую сказку</button>
+      </div>
+      <p class="share-note" id="shareNote" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer>Сделано с ✦ и новогодним настроением · 2027</footer>
+  <script src="script.js"></script>
+</body>
+</html>
